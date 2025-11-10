@@ -1,0 +1,43 @@
+# ============================
+# Core Deep Learning (CPU builds already installed manually)
+# ============================
+torch==2.2.0
+torchvision==0.17.0
+torchaudio==2.2.0
+
+# ============================
+# Hugging Face Transformers
+# ============================
+transformers>=4.38.0
+tokenizers>=0.15.0
+
+# ============================
+# Data Handling & Utilities
+# ============================
+
+numpy>=1.26.4
+pandas>=1.5.0
+scikit-learn>=1.3.0
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+
+# ============================
+# Audio / Video Processing
+# ============================
+librosa>=0.10.1
+opencv-python>=4.9.0
+Pillow>=10.0.0
+pydub>=0.25.1
+ffmpeg-python>=0.2.0
+soundfile>=0.12.1
+numba>=0.58.0
+
+# ============================
+# Speech Recognition (Offline)
+# ============================
+openai-whisper>=20231117
+
+# ============================
+# Miscellaneous
+# ============================
+requests>=2.31.0

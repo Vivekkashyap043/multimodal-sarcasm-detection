@@ -1,0 +1,6 @@
+# Ignore model and data files
+*.mp4
+*.avi
+*.pth
+*.npy
+venv/

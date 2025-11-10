@@ -1,0 +1,25 @@
+# Step 1: install torch CPU version
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+# Step 2: install everything else
+pip install -r requirements.txt
+
+
+# activating the virtual environment
+venv\Scripts\Activate.ps1
+
+
+# 1. Feature extraction
+python -m src.extract_features --data_dir data --out_dir outputs\features --metadata metadata.csv --device cpu
+
+# 2. Train the modal
+python -m src.train --data_dir data --features_dir outputs\features --metadata metadata.csv --output_dir outputs\models --epochs 5 --batch_size 8 --device cpu
+
+# 3. Evaluate the Model
+python -m src.evaluate --data_dir data --features_dir outputs\features --metadata metadata.csv --model_path outputs\models\best_model.pth --output_dir outputs --device cpu
+
+# 4. Testing with our own video
+python -m src.test_video --model_path outputs\models\best_model.pth --video_path D:\projects\sarcasm\multimodal-sarcasm-detection\videos\non-sar1.mp4 --device cpu
+
+
+
